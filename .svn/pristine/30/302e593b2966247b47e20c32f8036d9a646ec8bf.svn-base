@@ -1,0 +1,29 @@
+package evidenceprostredku_chyska;
+
+import prostredky.*;
+import kolekce.*;
+import command.*;
+import gui.GUI;
+import javafx.application.Application;
+import sprava.*;
+
+/**
+ *
+ * @author janch
+ */
+public class EvidenceProstredku_Chyska {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        try {
+//         CommandLineMain.main(args);
+            Application.launch(GUI.class, args);
+        } catch (Exception e) {
+        }
+        
+    }
+
+
+}

@@ -1,0 +1,48 @@
+package gui;
+
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
+import prostredky.*;
+import sprava.*;
+import gui.*;
+
+/**
+ *
+ * @author janch
+ */
+public class Editor extends Stage {
+
+    public Editor(DopravniProstredek dopravniProstredek) {
+        setTitle("Úprava dopravního prostředku");
+        switch (dopravniProstredek.getTypNazev()) {
+            case DODAVKA:
+                DialogDodavka dialogD = new DialogDodavka(dopravniProstredek);
+                break;
+            case MOTOCYKL:
+                DialogMotocykl dialogM = new DialogMotocykl(dopravniProstredek);
+                break;
+            case NAKLADNI_AUTOMOBIL:
+                DialogNakladniAutomobil dialogNA = new DialogNakladniAutomobil(dopravniProstredek);
+                break;
+            case OSOBNI_AUTOMOBIL:
+                DialogOsobniAutomobil dialogOA = new DialogOsobniAutomobil(dopravniProstredek);
+                 break;
+            case TRAKTOR:
+                DialogTraktor dialogT = new DialogTraktor(dopravniProstredek);
+                 break;
+        }
+    }
+
+}
